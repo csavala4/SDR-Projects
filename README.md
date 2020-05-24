@@ -18,7 +18,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   * We will make a directory for the gnuradio v3.8xx configuration. Run `mkdir ~/gnuradio38` and now we go into that directory with `cd ~/gnuradio38`.
   * Now we will clone the gnuradio repository and checkout the `maint-3.8` branch.
   
-  ```console
+  ```bash
   git clone --recursive https://github.com/gnuradio/gnuradio.git
   cd gnuradio
   git checkout maint-3.8
@@ -26,7 +26,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   
   * We will now change into the Vector-Optimized Library of Kernels(VOLK) directory and create a build directory. We call cmake with the path of the project's parent directory to generate the build scripts. We will then run the script using the Makefile. We then configure the recent shared libraries found in the directories.
   
-  ```console
+  ```bash
   cd volk
   cd ..
   mkdir build
@@ -40,7 +40,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   
   * Now we will work on installing the osmosdr resources into the gnuradio-companion.
   
-  ```console
+  ```bash
   cd ~/gnuradio38
   git clone https://github.com/osmocom/gr-osmosdr
   cd gr-osmosdr
@@ -53,7 +53,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   
   * We will now include the gnuradio Digital Audio Broadcasting module(gr-dab).
   
-  ```console
+  ```bash
   cd ~/gr38
   git clone https://github.com/andrmuel/gr-dab
   cd gr-dab
@@ -68,3 +68,6 @@ One of the problems I encountered after the installation of the SDR, was wanting
   * After running these commands succesfully, launch the companion GUI either by clicking on the application or running `gnuradio-companion` in the command line.
   
   
+ ## Designing the FM Radio Reciever with GnuRadio Companion
+ * We first include the source of our signal.  The `rtl_tcp` command sets up an <a href="https://en.wikipedia.org/wiki/In-phase_and_quadrature_components">I/Q</a> spectrum server for our SDR. Below is an example of an expected output.
+ ![](images/test_sdr_tcp_success.png)
