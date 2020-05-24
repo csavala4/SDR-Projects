@@ -17,10 +17,13 @@ One of the problems I encountered after the installation of the SDR, was wanting
 * Now, we just want to make sure the dependencies for gnuradio--and everything else we need is installed prior to configuration. We can run `apt-get build-dep gnuradio` and `apt-get install git python3-dev libgmp-dev python3-mako libfaad-dev python3-numpy python3-gi-cairo libgtk-3-dev python3-pyqt5 librtlsdr-dev pulseaudio` to make sure everything is installed.
   * We will make a directory for the gnuradio v3.8xx configuration. Run `mkdir ~/gnuradio38` and now we go into that directory with `cd ~/gnuradio38`.
   * Now we will clone the gnuradio repository and checkout the `maint-3.8` branch.
-  ```cloning repo
-   git clone --recursive https://github.com/gnuradio/gnuradio.git
-   cd gnuradio
-   git checkout maint-3.8
+  ```
+  
+  git clone --recursive https://github.com/gnuradio/gnuradio.git
+  cd gnuradio
+  git checkout maint-3.8
+   
+   
   ```
   * We will now change into the Vector-Optimized Library of Kernels(VOLK) directory and create a build directory. We call cmake with the path of the project's parent directory to generate the build scripts. We will then run the script using the Makefile. We then configure the recent shared libraries found in the directories.
   ```cmake gnuradio
