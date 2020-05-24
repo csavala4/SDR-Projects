@@ -26,20 +26,21 @@ One of the problems I encountered after the installation of the SDR, was wanting
   
   * We will now change into the Vector-Optimized Library of Kernels(VOLK) directory and create a build directory. We call cmake with the path of the project's parent directory to generate the build scripts. We will then run the script using the Makefile. We then configure the recent shared libraries found in the directories.
   
- 
-           cd volk
-           cd ..
-           mkdir build
-           cd build
-           cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 -DGR_PYTHON_DIR=/usr/local/lib/python3.7/dist-packages -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON ../
-           make -j8
-           sudo make install
-           sudo ldconfig
+  ```console
+  cd volk
+  cd ..
+  mkdir build
+  cd build
+  cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 -DGR_PYTHON_DIR=/usr/local/lib/python3.7/dist-packages -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON ../
+  make -j8
+  sudo make install
+  sudo ldconfig
+  ```
  
   
   * Now we will work on installing the osmosdr resources into the gnuradio-companion.
   
- 
+  ```console
   cd ~/gnuradio38
   git clone https://github.com/osmocom/gr-osmosdr
   cd gr-osmosdr
@@ -48,11 +49,11 @@ One of the problems I encountered after the installation of the SDR, was wanting
   make -j8
   sudo make install
   sudo ldconfig
- 
+  ``` 
   
   * We will now include the gnuradio Digital Audio Broadcasting module(gr-dab).
   
- 
+  ```console
   cd ~/gr38
   git clone https://github.com/andrmuel/gr-dab
   cd gr-dab
@@ -62,7 +63,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   make
   sudo make install
   sudo ldconfig
- 
+  ```
   
   * After running these commands succesfully, launch the companion GUI either by clicking on the application or running `gnuradio-companion` in the command line.
   
