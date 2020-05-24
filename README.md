@@ -10,6 +10,7 @@ I chose the Nooelec NESDR SMArt v4 as a pilot model to delve further into the he
   * To allow the driver we want, we will need to run the command `sudo apt-get install rtl-sdr`. This includes the utilities and drivers we need related to using the SDR.
   * Now that the SDR is set up, test it by running `rtl_test`. This will test the device and its functions. At this point, the screen should stop printing.
   * The completion of these steps should load the modules and libraries needed to run the SDR.
+  ![](images/test_sdr_image_success.png)
 ### Installation of gnuradio 3.8xx and the configuration with Nooelec NESDR SMArt v4
 One of the problems I encountered after the installation of the SDR, was wanting to use the gnuradio framework to program simulation blocks to as a source for the SDR.  I realized there were wasn't much support with 20.04 LTS and gnuradio v3.8x. This led to problems with RTL-SDR blocks and OsmoSDR blocks when configuring the tests. The following series of commands were a successful attempt at configuring gnuradio v3.8 and its gnuradio-companion GUI to communicated with the SDR.
 * First, if gnuradio is not installed, run `sudo apt install gnuradio`.
