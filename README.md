@@ -24,14 +24,15 @@ One of the problems I encountered after the installation of the SDR, was wanting
   ```
   * We will now change into the Vector-Optimized Library of Kernels(VOLK) directory and create a build directory. We call cmake with the path of the project's parent directory to generate the build scripts. We will then run the script using the Makefile. We then configure the recent shared libraries found in the directories.
   ```cmake gnuradio
-  cd volk
-  cd ..
-  mkdir build
-  cd build
-  cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 -DGR_PYTHON_DIR=/usr/local/lib/python3.7/dist-packages -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON ../
-  make -j8
-  sudo make install
-  sudo ldconfig
+   
+   cd volk
+   cd ..
+   mkdir build
+   cd build
+   cmake -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 -DGR_PYTHON_DIR=/usr/local/lib/python3.7/dist-packages -DENABLE_GRC=ON -DENABLE_GR_QTGUI=ON ../
+   make -j8
+   sudo make install
+   sudo ldconfig
   ```
   * Now we will work on installing the osmosdr resources into the gnuradio-companion.
   ```osmosdr make
