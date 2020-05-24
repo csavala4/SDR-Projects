@@ -1,10 +1,9 @@
-## Installation of rtl-sdr and gnuradio on Ubuntu 20.04 LTS
+# Installation of rtl-sdr and gnuradio on Ubuntu 20.04 LTS
 
 ### Introduction to  setting up Nooelec NESDR SMArt v4
 I chose the Nooelec NESDR SMArt v4 as a pilot model to delve further into the heart of signal processing. 
-* First, insert the SDR dongle into the computer's USB port. Connect the antenna to the SDR. 
-* The antenna used for the FM Receiver design was a `Telescopic quarter-wave 120MHz-475MHz antenna`. This antenna covers commercial FM broadcasts pretty well.  
-  * Run the command `lsusb`. This will show all the USB devices attached to the computer.
+* First, insert the SDR dongle into the computer's USB port. Connect the antenna to the SDR. The antenna used for the FM Receiver design was a `Telescopic quarter-wave 120MHz-475MHz antenna`. This antenna covers commercial FM broadcasts pretty well.  
+  * Next, Run the command `lsusb`. This will show all the USB devices attached to the computer.
   * The NESDR should be listed as `Realtek Semiconductor Corp. RTL2838 DVB-T`. `DVB-T` means that the OS has recognized the device and loaded what it believes to be the correct driver. The default use is set to recieve television broadcasts.
   * Run the command `lsmod | grep dvb` to list the loaded modules with the letters `dvb`
   * To use the device as an SDR we must blacklist the default modules.
@@ -71,8 +70,8 @@ One of the problems I encountered after the installation of the SDR, was wanting
   ![](images/dab_osmosdr_modules_success.png)
   
   
- ## Designing the FM Radio Reciever with GnuRadio Companion
- * I wanted to accomplish the basic functions of radio receiving: filter, amplify, demodulate.
+ # Designing the FM Radio Reciever with GnuRadio Companion
+ * I wanted to accomplish the basic functions of <a href="https://en.wikipedia.org/wiki/Frequency_modulation"> Frequency Modulation</a> receiving.
  
  * We first include the source of our signal.  The <a href="http://manpages.ubuntu.com/manpages/trusty/man1/rtl_tcp.1.html">`rtl_tcp`</a> command sets up an <a href="https://en.wikipedia.org/wiki/In-phase_and_quadrature_components">I/Q</a> spectrum server for our SDR. Below is an example of an expected output.
  ![](images/test_sdr_tcp_success.png)
