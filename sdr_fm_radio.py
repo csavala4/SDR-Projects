@@ -217,7 +217,7 @@ class sdr_fm_radio(gr.top_block, Qt.QWidget):
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win)
         self.osmosdr_source_0 = osmosdr.source(
-            args="numchan=" + str(1) + " " + 'rtl_tcp=192.168.0.29:1234'
+            args="numchan=" + str(1) + " " + 'rtl_tcp=127.0.0.1:1234'
         )
         self.osmosdr_source_0.set_time_unknown_pps(osmosdr.time_spec_t())
         self.osmosdr_source_0.set_sample_rate(samp_rate)
