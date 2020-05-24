@@ -1,11 +1,3 @@
----
-title: This will be used as the title-tag of the page head
----
-
-hello
-=====
-
-**You are here!**
 ## Installation of rtl-sdr and gnuradio on Ubuntu 20.04 LTS
 ### Introduction to  setting up Nooelec NESDR SMArt v4
 I chose the Nooelec NESDR SMArt v4 as a pilot model to delve further into the heart of signal processing. 
