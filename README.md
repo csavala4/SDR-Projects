@@ -70,7 +70,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   ![](images/dab_osmosdr_modules_success.png)
   
   
-## Designing the FM Radio Reciever with GnuRadio Companion
+### Designing the FM Radio Reciever with GnuRadio Companion
 
  * I wanted to accomplish the basic functions of <a href="https://en.wikipedia.org/wiki/Frequency_modulation"> Frequency Modulation</a> receiving.
  
