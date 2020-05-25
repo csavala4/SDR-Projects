@@ -70,7 +70,7 @@ One of the problems I encountered after the installation of the SDR, was wanting
   ![](images/dab_osmosdr_modules_success.png)
   
   
- # Designing the FM Radio Reciever with GnuRadio Companion
+ ## Designing the FM Radio Reciever with GnuRadio Companion
  * I wanted to accomplish the basic functions of <a href="https://en.wikipedia.org/wiki/Frequency_modulation"> Frequency Modulation</a> receiving.
  
  * We first include the source of our signal.  The <a href="http://manpages.ubuntu.com/manpages/trusty/man1/rtl_tcp.1.html">`rtl_tcp`</a> command sets up an <a href="https://en.wikipedia.org/wiki/In-phase_and_quadrature_components">I/Q</a> spectrum server for our SDR. Below is an example of an expected output.
